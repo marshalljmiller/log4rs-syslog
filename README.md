@@ -69,7 +69,7 @@ extern crate log4rs;
 extern crate log4rs_syslog;
 
 fn main() {
-    let mut deserializers = log4rs::file::Deserializers::new();
+    let mut deserializers = log4rs::config::Deserializers::new();
     log4rs_syslog::register(&mut deserializers);
 
     // Note that configuration file should have right extension, otherwise log4rs will fail to

@@ -7,7 +7,7 @@ extern crate tempfile;
 fn main() {
     use std::io::Write;
 
-    let mut deserializers = log4rs::file::Deserializers::new();
+    let mut deserializers = log4rs::config::Deserializers::new();
     log4rs_syslog::register(&mut deserializers);
 
     let yaml_conf = br#"
